@@ -24,6 +24,8 @@ from bs4 import BeautifulSoup
 from urllib import parse
 from oauth2client.service_account import ServiceAccountCredentials
 
+CURRENT_DIR = os.path.dirname((os.path.realpath(__file__)))
+
 def add_scheme(url):
     if re.match(r'\w+://', url): return url
     return re.sub(r'^:?/?/?', r'http://', url)
@@ -255,7 +257,7 @@ def run_city_scrape(filename):
 
     name = os.path.basename(filename)
     name = name.partition('.')[0]
-    ofile = '{}_o.csv'.format(name)
+    ofile = '{}/{}_o.csv'.format(CURRENT_DIR, name)
 
     try:
         fmt = '{}: [{}] {}'
@@ -281,8 +283,7 @@ def run_city_scrape(filename):
 def main():
     try:
         # Assumes states are in the same folder
-        cdir = os.path.dirname((os.path.realpath(__file__)))
-        path = '{}/states/*'.format(cdir)
+        path = '{}/states/*'.format(CURRENT_DIR)
         files = glob.glob(path)
         for fl in files:
             run_city_scrape(fl)
