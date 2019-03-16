@@ -123,4 +123,6 @@ dmypy.json
 creds.json
 states.json
 *_o.csv
+log.txt
+
 

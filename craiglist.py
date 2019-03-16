@@ -280,7 +280,10 @@ def run_city_scrape(filename):
 
 def main():
     try:
-        files = glob.glob('./states/*')
+        # Assumes states are in the same folder
+        cdir = os.path.dirname((os.path.realpath(__file__)))
+        path = '{}/states/*'.format(cdir)
+        files = glob.glob(path)
         for fl in files:
             run_city_scrape(fl)
     except KeyboardInterrupt:
