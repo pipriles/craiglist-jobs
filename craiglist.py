@@ -137,6 +137,7 @@ def scrape_jobs(url):
         jobs = list(page)
         
         yield from jobs
+        time.sleep(2)
         
         if soup.find(attrs={ 'class': 'lastpage' }): break 
         params['s'] = params.get('s', 0) + len(jobs)
@@ -265,7 +266,6 @@ def run_city_scrape(filename):
             results.append(r)
             export_csv(ofile, results)
             cont += 1
-            # time.sleep(5)
 
         # Add dataframe to the sheet
         print('Uploading results...')
