@@ -1,0 +1,4 @@
+DIR_PATH="path to directory"
+ENV_FILE=$DIR_PATH/.env
+SCRIPT=$DIR_PATH/craiglist.py
+* * * * 1 tmux new-session -d "source $ENV_FILE ; python3 -u $SCRIPT | tee $DIR_PATH/log.txt"
