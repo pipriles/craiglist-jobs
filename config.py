@@ -13,13 +13,50 @@ KEYWORDS = [
     'Prosthodontist',
     'Dentist',
     '"Dental Hygienist"',
-    '"Dental Assistant"'
+    '"Dental Assistant"',
+
+    # New
+    'OS',
+    'Implantologist',
+    'Perio',
+    'Exo',
+    'Endo',
+    'Ortho',
+    '"GP Prostho"',
+    '"GP Implantologist"',
+    '"GP Endo"',
+    'Anesthesiologist',
 ]
 
 SCOPE = [
     'https://spreadsheets.google.com/feeds',
     'https://www.googleapis.com/auth/drive'
- ]
+]
+
+STATES = [
+    'washington',
+    'michigan',
+    'arizona',
+    'new jersey',
+    'delaware',
+    'california',
+    'ohio',
+    'utah',
+    'illinois',
+    'missouri',
+    'louisiana',
+    'mass',
+    'rhode island',
+    'pennsylvania',
+    'colorado',
+    'georgia',
+    'minnesota',
+    'texas',
+    'virginia',
+    'new york',
+    'oklahoma',
+    'oregon'
+]
 
 CREDS_JSON = os.getenv('CREDS_FILE')
 if not CREDS_JSON:
