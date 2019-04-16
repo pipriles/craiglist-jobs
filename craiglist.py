@@ -232,7 +232,7 @@ def import_df(df, name):
     sh = gc.open_by_key(config.SHEET_KEY)
 
     today = dt.datetime.today()
-    today = today.strftime('%Y/%m/%d')
+    today = today.strftime('%m/%d')
     name = '{} {}'.format(name, today)
 
     rs, cs = df.shape
@@ -272,7 +272,18 @@ def run_city_scrape(filename):
         # Add dataframe to the sheet
         print('Uploading results...')
         df = prepare_dataframe(results)
-        import_df(df, name.capitalize())
+
+        code = config.US_STATES[name]
+
+        # Split into specialist 
+        name = '{} Specialist'.format(code)
+        sp = df[df.Keyword.isin(config.SPECIALIST)]
+        import_df(sp, name)
+        
+        # Split into generalist
+        name = '{} General'.format(code)
+        sp = df[~df.Keyword.isin(config.SPECIALIST)]
+        import_df(sp, name)
 
     except Exception as e:
         print(e)

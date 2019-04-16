@@ -2,30 +2,44 @@
 
 import os
 
+# Complete keywords
 KEYWORDS = [
-    'Orthodontist',
-    'Oral Surgeon',
-    'Periodontist', 
+    'Dentist',
+    'Anesthesiologist',
+    'Exodontist',
     'Endodontist',
+    'Implantologist',
+    'Orthodontist',
     'Pedodontist',
+    'Prosthodontist',
+    'Periodontist',
+    '"Oral Surgeon"',
+    '"Dental Anesthesiologist"',
+    '"Dental Assistant"',
+    '"Dental Hygienist"'
+    '"Dental Specialist"',
+    '"Dental Office Manager"',
+    '"General Practitioner Implantologist"',
+    '"General Practitioner Endodontist"',
+    '"General Practitioner Prosthodontist"',
+]
+
+# Specialist keywords
+SPECIALIST = [
+    'Anesthesiologist',
+    'Exodontist',
+    'Endodontist',
+    'Implantologist',
+    'Orthodontist',
+    'Pedodontist',
+    'Prosthodontist',
+    'Periodontist',
+    '"Oral Surgeon"',
     '"Dental Specialist"',
     '"Dental Anesthesiologist"',
-    'Prosthodontist',
-    'Dentist',
-    '"Dental Hygienist"',
-    '"Dental Assistant"',
-
-    # New
-    'OS',
-    'Implantologist',
-    'Perio',
-    'Exo',
-    'Endo',
-    'Ortho',
-    '"GP Prostho"',
-    '"GP Implantologist"',
-    '"GP Endo"',
-    'Anesthesiologist',
+    '"General Practitioner Implantologist"',
+    '"General Practitioner Endodontist"',
+    '"General Practitioner Prosthodontist"',
 ]
 
 SCOPE = [
@@ -33,7 +47,32 @@ SCOPE = [
     'https://www.googleapis.com/auth/drive'
 ]
 
-STATES = [
+US_STATES = {
+    'arizona': 'AZ',
+    'california': 'CA',
+    'colorado': 'CO',
+    'delaware': 'DE',
+    'georgia': 'GA',
+    'illinois': 'IL',
+    'louisiana': 'LA',
+    'massachusetts': 'MA',
+    'michigan': 'MI',
+    'minnesota': 'MN',
+    'missouri': 'MO',
+    'new jersey': 'NJ',
+    'new york': 'NY',
+    'ohio': 'OH',
+    'oklahoma': 'OK',
+    'oregon': 'OR',
+    'pennsylvania': 'PA',
+    'rhode island': 'RI',
+    'texas': 'TX',
+    'utah': 'UT',
+    'virginia': 'VA',
+    'washington': 'WA'
+}
+
+CL_STATES = [
     'washington',
     'michigan',
     'arizona',
