@@ -273,6 +273,10 @@ def run_city_scrape(filename):
         print('Uploading results...')
         df = prepare_dataframe(results)
 
+        # Filter last 7 days results
+        diff = dt.datetime.now() - pd.to_datetime(df.Date)
+        df = df[diff < pd.Timedelta('7 days')]
+
         code = config.US_STATES[name]
 
         # Split into specialist 
