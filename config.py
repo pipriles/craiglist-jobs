@@ -39,7 +39,7 @@ SPECIALIST = [
     '"Dental Anesthesiologist"',
     '"General Practitioner Implantologist"',
     '"General Practitioner Endodontist"',
-    '"General Practitioner Prosthodontist"',
+    '"General Practitioner Prosthodontist"'
 ]
 
 SCOPE = [
