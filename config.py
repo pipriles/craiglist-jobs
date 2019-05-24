@@ -16,12 +16,12 @@ KEYWORDS = [
     '"Oral Surgeon"',
     '"Dental Anesthesiologist"',
     '"Dental Assistant"',
-    '"Dental Hygienist"'
+    '"Dental Hygienist"',
     '"Dental Specialist"',
     '"Dental Office Manager"',
     '"General Practitioner Implantologist"',
     '"General Practitioner Endodontist"',
-    '"General Practitioner Prosthodontist"',
+    '"General Practitioner Prosthodontist"'
 ]
 
 # Specialist keywords
