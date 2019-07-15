@@ -4,4 +4,4 @@ LOG_FILE=$DIR_PATH/log.txt
 SCRIPT=$DIR_PATH/craiglist.py
 
 # Every monday at 4:00 am
-0 4 * * 1 tmux new-session -d ". $ENV_FILE ; python3 -u $SCRIPT | tee $LOG_FILE"
+0 4 * * * tmux new-session -d ". $ENV_FILE ; python3 -u $SCRIPT | tee $LOG_FILE"
